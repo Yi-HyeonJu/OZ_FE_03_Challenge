@@ -2,109 +2,121 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="author" content="이현주">
+        <meta name="description" content="form 만들기 실습">
+        <meta name="keywords" content="코딩, 설문, form"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>설문조사</title>
     </head>
     <body>
-        <form action="https://example.com/submit_form" method="post">
-            <table border="1">
-                <caption>설문조사</caption>
-                <tr>
-                    <th width="100" height="50">이름</th>
-                    
-                    <td width="250">
+        <header>
+            <h1>설문조사 양식</h1>
+            <P>모든 항목에 빠짐없이 작성해주세요.</P>
+        </header>
+        <hr>
+        <main>
+            <form action="https://example.com/submit_form" method="post">
+                <table border="1">
+                    <caption>아래 내용을 모두 작성해주세요</caption>
+                    <tr>
+                        <th width="100" height="50">이름</th>
+                        
+                        <td width="250">
                         <label for="name">본인의 이름을 입력해 주세요.</label>
                         <input type="text" placeholder="이름" id="name" name="name">
-                    </td>
-                </tr>
-                <tr>
-                    <th height="50">생년.월.일</th>
-                    
-                    <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th height="50">생년.월.일</th>
+                        
+                        <td>
                         <label for="birthday">본인의 생년월일을 입력해 주세요</label>
                         <input type="date" id="birthday" name="birthday"
                         min="1924-01-01" max="2024-03-23">
-                    </td>
-                </tr>
-                <tr>
-                    <th height="50">성별</th>
-                    
-                    <td>
-                        <span>본인의 성별을 선택해 주세요.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th height="50">성별</th>
+                        
+                        <td>
+                            <span>본인의 성별을 선택해 주세요.</span>
+                            <br>
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">남자</label>
+                            
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">여자</label>
+                            
+                            <input type="radio" name="gender" id="secret" value="secret">
+                            <label for="secret">비공개</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th height="50">나이</th>
+                        <td>
+                            <label for="age">본인의 나이를 입력해 주세요.</label>
+                            <br>
+                            <input type="number" placeholder="나이" id="age"
+                            name="age" min="19" max="100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th height="50">사는 지역</th>
                         <br>
-                        <input type="radio" name="gender" id="male" value="male">
-                        <label for="male">남자</label>
-                        
-                        <input type="radio" name="gender" id="female" value="female">
-                        <label for="female">여자</label>
-                        
-                        <input type="radio" name="gender" id="secret" value="secret">
-                        <label for="secret">비공개</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th height="50">나이</th>
-                    <td>
-                        <label for="age">본인의 나이를 입력해 주세요.</label>
-                        <br>
-                        <input type="number" placeholder="나이" id="age"
-                        name="age" min="19" max="100">
-                    </td>
-                </tr>
-                <tr>
-                    <th height="50">사는 지역</th>
-                    <br>
-                    <td>
-                        <span>본인의 사는 지역을 선택해 주세요</span>
-                        <select id="location" name="location">
-                            <option selected disabled hidden>선택해 주세요</option>
-                            <option>서울</option>
-                            <option>경기</option>
-                            <option>인천</option>
-                            <option>강원</option>
-                            <option>제주</option>
-                            <option>대전</option>
-                            <option>충북</option>
-                            <option>충남/세종</option>
-                            <option>부산</option>
-                            <option>울산</option>
-                            <option>경남</option>
-                            <option>대구</option>
-                            <option>경북</option>
-                            <option>광주</option>
-                            <option>전남</option>
-                            <option>전주/전북</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th height="50">취미</th>
-                    <td>
-                        <span>본인의 취미를 선택해 주세요. (중복)</span>
-                        <br>
-                        <input type="checkbox" name="hobby" id="game" value="game">
-                        <label for="game">게임</label>
-                        
-                        <input type="checkbox" name="hobby" id="walk" value="walk">
-                        <label for="walk">산책</label>
-                        
-                        <input type="checkbox" name="hobby" id="movie" value="movie">
-                        <label for="movie">영화 감상</label>
-                    </td>
-                </tr>
-                <tr>
-                    <th height="100">기타</th>
-                    <td>
-                        <span>설문조사에 대한 의견을 적어주세요.</span>
-                        <textarea placeholder="자유롭게 의견을 적어주세요"></textarea>
-                    </td>
-                </tr>
-            </table>
-            
-            <br>
-            
-            <button type="submit">제출하기!</button>
-            
-        </form>
-    </body>
+                        <td>
+                            <span>본인의 사는 지역을 선택해 주세요</span>
+                            <select id="location" name="location">
+                                <option selected disabled hidden>선택해 주세요</option>
+                                <option>서울</option>
+                                <option>경기</option>
+                                <option>인천</option>
+                                <option>강원</option>
+                                <option>제주</option>
+                                <option>대전</option>
+                                <option>충북</option>
+                                <option>충남/세종</option>
+                                <option>부산</option>
+                                <option>울산</option>
+                                <option>경남</option>
+                                <option>대구</option>
+                                <option>경북</option>
+                                <option>광주</option>
+                                <option>전남</option>
+                                <option>전주/전북</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th height="50">취미</th>
+                        <td>
+                            <span>본인의 취미를 선택해 주세요. (중복)</span>
+                            <br>
+                            <input type="checkbox" name="hobby" id="game" value="game">
+                            <label for="game">게임</label>
+                            
+                            <input type="checkbox" name="hobby" id="walk" value="walk">
+                            <label for="walk">산책</label>
+                            
+                            <input type="checkbox" name="hobby" id="movie" value="movie">
+                            <label for="movie">영화 감상</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th height="100">기타</th>
+                        <td>
+                            <span>설문조사에 대한 의견을 적어주세요.</span>
+                            <textarea name="comment" rows="4" cols="28" placeholder="자유롭게 의견을 적어주세요"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <button type="submit">제출하기!</button>
+            </form>
+        </main>
+        <footer>
+            <hr>
+            <p>작성해주셔서 감사합니다.</p>
+        </footer>
+        </body>
 </html>
