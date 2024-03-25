@@ -64,26 +64,17 @@ hr{
     padding: 20px 10px 20px;
 }
 
-#site_img{
-    padding: 0px 62.5px 0px;
-}
-
-#github_im{
+.img{
     width: 100px;
-    padding-right: 100px;
-}
-
-#velog_im{
-    width: 100px;
-    border: 0.5px;
-    border-radius: 15px;
-}
-
-#Instagram_im{
-    width: 100px;
-    padding-left: 100px;
+    padding-left: 59px;
+    padding-right: 59px;
 }
 
 #site_text{
-    padding: 12px 62.5px 12px;
+    padding: 12px 0px 12px;
+}
+
+.text{
+    padding-left: 80px;
+    padding-right: 80px;
 }
