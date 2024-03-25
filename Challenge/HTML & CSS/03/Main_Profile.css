@@ -1,0 +1,85 @@
+body{
+    width: 698px;
+    margin: 20px 63px 20px;
+}
+
+
+#header_box{
+    width: 700px;
+    height: 330px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#header{
+    height: 65px;
+    padding: 15px 15px 15px;
+    margin: 0px;
+}
+
+.name{
+    margin: 0px;
+}
+
+#small_header{
+    padding: 10px 0px 20px 10px;
+}
+
+.content{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+#profile{
+    margin-right: 5px;
+    padding: 0px 12px 0px;
+    border: 1.5px solid rgb(131, 196, 239);
+    border-radius: 15px;
+    background-color: rgb(131, 196, 239);
+}
+
+#web{
+    margin-right: 5px;
+    padding: 0px 12px 0px;
+    border: 1.5px solid rgb(131, 196, 239);
+    border-radius: 15px;
+}
+
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
+hr{
+    margin: 0px;
+}
+
+#main_box{
+    height: 190px;
+}
+
+#main{
+    padding: 25px 10px 25px;
+}
+
+#hj_img{
+    width: 130px;
+    float: left;
+    border-image-width: 1px;
+    border-radius: 15px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 8px 0px 8px 150px;
+    margin: 0px;
+}
+
+#quokka{
+    text-decoration-line: underline;
+    color: black;
+}
+#game{
+    text-decoration: none;
+}
