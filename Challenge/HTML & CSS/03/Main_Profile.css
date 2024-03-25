@@ -29,21 +29,14 @@ body{
 .content{
     font-size: 19px;
     font-weight: 500;
+    margin-right: 5px;
+    padding: 0px 12px 0px;
+    border: 1.5px solid rgb(131, 196, 239);
+    border-radius: 15px;
 }
 
 #profile{
-    margin-right: 5px;
-    padding: 0px 12px 0px;
-    border: 1.5px solid rgb(131, 196, 239);
-    border-radius: 15px;
     background-color: rgb(131, 196, 239);
-}
-
-#web{
-    margin-right: 5px;
-    padding: 0px 12px 0px;
-    border: 1.5px solid rgb(131, 196, 239);
-    border-radius: 15px;
 }
 
 a{
