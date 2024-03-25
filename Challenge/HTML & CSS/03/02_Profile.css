@@ -1,0 +1,89 @@
+body{
+    width: 698px;
+    margin: 20px 63px 20px;
+}
+
+#header_box{
+    width: 700px;
+    height: 330px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#header{
+    height: 65px;
+    padding: 15px 15px 15px;
+    margin: 0px;
+}
+
+.name{
+    margin: 0px;
+}
+
+#small_header{
+    padding: 10px 0px 20px 10px;
+}
+
+.content{
+    font-size: 19px;
+    font-weight: 500;
+}
+
+#profile{
+    margin-right: 5px;
+    padding: 0px 12px 0px;
+    border: 1.5px solid rgb(131, 196, 239);
+    border-radius: 15px;
+}
+
+#web{
+    margin-right: 5px;
+    padding: 0px 12px 0px;
+    border: 1.5px solid rgb(131, 196, 239);
+    border-radius: 15px;
+    background-color: rgb(131, 196, 239);
+}
+
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
+hr{
+    margin: 0px;
+}
+
+#main_box{
+    box-sizing: border-box;
+    height: 180px;
+}
+
+#main{
+    height: 140px;
+    padding: 20px 10px 20px;
+}
+
+#site_img{
+    padding: 0px 62.5px 0px;
+}
+
+#github_im{
+    width: 100px;
+    padding-right: 100px;
+}
+
+#velog_im{
+    width: 100px;
+    border: 0.5px;
+    border-radius: 15px;
+}
+
+#Instagram_im{
+    width: 100px;
+    padding-left: 100px;
+}
+
+#site_text{
+    padding: 12px 62.5px 12px;
+}
