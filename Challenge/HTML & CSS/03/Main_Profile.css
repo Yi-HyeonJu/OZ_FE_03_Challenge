@@ -3,8 +3,7 @@ body{
     margin: 20px 63px 20px;
 }
 
-
-#header_box{
+#full_box{
     width: 700px;
     height: 330px;
     border: 1px solid black;
@@ -23,7 +22,7 @@ body{
 }
 
 #small_header{
-    padding: 10px 0px 20px 10px;
+    padding: 15px;
 }
 
 .content{
@@ -46,10 +45,6 @@ a{
 
 hr{
     margin: 0px;
-}
-
-#main_box{
-    height: 190px;
 }
 
 #main{
