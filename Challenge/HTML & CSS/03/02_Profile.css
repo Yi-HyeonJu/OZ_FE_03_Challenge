@@ -3,7 +3,7 @@ body{
     margin: 20px 63px 20px;
 }
 
-#header_box{
+#full_box{
     width: 700px;
     height: 330px;
     border: 1px solid black;
@@ -28,9 +28,6 @@ body{
 .content{
     font-size: 19px;
     font-weight: 500;
-}
-
-#profile{
     margin-right: 5px;
     padding: 0px 12px;
     border: 1.5px solid rgb(131, 196, 239);
@@ -38,10 +35,6 @@ body{
 }
 
 #web{
-    margin-right: 5px;
-    padding: 0px 12px;
-    border: 1.5px solid rgb(131, 196, 239);
-    border-radius: 15px;
     background-color: rgb(131, 196, 239);
 }
 
@@ -52,11 +45,6 @@ a{
 
 hr{
     margin: 0px;
-}
-
-#main_box{
-    box-sizing: border-box;
-    height: 180px;
 }
 
 #main{
