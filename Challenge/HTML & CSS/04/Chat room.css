@@ -29,7 +29,7 @@ body{
     border-radius: 10px;
     background-color: #c8edff;
 }
-.room{
+.room-info{
     float: left;
 }
 .room-name, .room-count{
@@ -40,27 +40,26 @@ body{
     color: gray;
 }
 
-.chat-from{
+.chat-form{
     height: 90px;
     background-color: #fff;
 }
-.chat-from-field{
-    height: 90px;
-}
-.chat-from-text{
+
+.chat-form-text{
     float: left;
     width: calc(100% - 90px);
     height: 90px;
     resize: none;
     border: none;
-    font-size: 24px;
+    font-size: zxpx;
     padding: 10px;
 }
-.chat-from-text:focus{
+
+.chat-form-text:focus{
     outline: none;
 }
 
-.chat-from-button{
+.chat-form-button{
     margin: 20px 10px;
     float: right;
     width: 70px;
@@ -71,6 +70,7 @@ body{
     background-color: #7dd2fd;
     font-size: 12px;
 }
-.chat-from-button:active{
-    background-color: #54abd3;
+
+.chat-form-button:active{
+    background-color: #4cabdb;
 }
