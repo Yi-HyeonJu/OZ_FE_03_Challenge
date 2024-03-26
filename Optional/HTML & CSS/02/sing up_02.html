@@ -4,11 +4,81 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="IE=edge">
         <meta name="author" content="이현주">
-        <meta name="description" content="html 회원가입 폼 만들어보가">
-        <meta name="keywords" content="코딩, html, login form"> 
+        <meta name="description" content="html 회원가입 폼 만들어보기_2">
+        <meta name="keywords" content="코딩, html, login form_2"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>회원가입 폼</title>
+        <title>회원가입 폼 2</title>
     </head>
     <body>
+        <h1>회원가입</h1>
+        <form>
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                <ul>
+                    <li>
+                        <label for="name">이름 : </label>
+                        <input type="text" id="name" name="name">
+                    </li>
+                    <li>
+                        <label for="id">아이디 : </label>
+                        <input type="text" id="id" name="id" size="19"
+                        minlength="6" maxlength="19" placeholder="6자 이상 20자 미만 공백 없게 작성해주세요">
+                    </li>
+                    <li>
+                        <label for="pass">비밀번호 : </label>
+                        <input type="password" id="pass" name="pass"
+                        placeholder="대,소문자로 입력해주세요.">
+                    </li>
+                    <li>
+                        <label for="email">이메일 : </label>
+                        <input type="email" id="email" name="email">
+                    </li>
+                    <li>
+                        <label for="phone_nb">휴대폰 : </label>
+                        <input type="tel" id="phone_nb" name="phone_nb">
+                    </li>
+                    
+                    <button type="submit">가입하기</button>
+                    <button type="submit"> 취소</button>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>취미</legend>
+                <ui>
+                    <li>   
+                        <input type="checkbox" id="cording" name="cording" value="코딩">
+                        <label for="cording">코딩</label>
+                        
+                        <input type="checkbox" id="gym" name="gym" value=운동">
+                        <label for="gym">운동</label>
+                        
+                        <input type="checkbox" id="breathing" name="breathing" value="숨쉬기">
+                        <label for="breathing">숨쉬기</label>
+                        
+                        <input type="checkbox" id="trip" name="trip" value="여행">
+                        <label for="trip">여행</label>
+                        
+                        <input type="checkbox" id="sleeping" name="sleeping" value="잠자기">
+                        <label for="sleeping">잠자기</label>
+                        
+                        <input type="checkbox" id="reading" name="reading" value="독서">
+                        <label for="reading">독서</label>
+                        
+                        <input type="checkbox" id="netflix" name="netflix" value="넷플시청">
+                        <label for="netflix">넷플시청</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="male" name="male" value="남">
+                        <label for="male">남</label>
+                        
+                        <input type="radio" id="female" name="female" value=여">
+                        <label for="female">여</label>
+                        
+                        <input type="radio" id="secret" name="secret" value="비밀">
+                        <label for="secret">비밀</label>
+                    </li>
+                </ui>
+            </fieldset>
+        </form>
     </body>
-    </html>
+</html>
