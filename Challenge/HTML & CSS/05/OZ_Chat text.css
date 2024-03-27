@@ -1,0 +1,57 @@
+.chat-text_screen{
+    height: 446px;
+    padding: 0;
+    list-style-type: none;
+    overflow: scroll;
+}
+
+
+/* 전체 텍스트 */
+ul li{
+    font-size: 13px;
+    width: max-content;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    line-height: 18px;
+}
+
+/* 왼쪽 텍스트 정렬 & 위치 */
+li[class ^="left"]{
+    margin: 0 0 10px 5px;
+    position: relative;
+    left: 15px;
+    text-align: left;
+}
+/* 왼쪽 텍스트 꼬리*/
+li[class ^="left"]::after{
+    content: "";
+    border-top: 16px solid white;
+    border-left: 16px solid transparent;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+}
+
+/* 오른쪽 텍스트 정렬 & 위치 */
+li[class ^="right"]{
+    margin: 0 5px 10px 0;
+    float: right;
+    clear: both;
+    position: relative;
+    right: 15px;
+    text-align: right;
+}
+/* 오른쪽 텍스트 꼬리*/
+li[class ^="right"]::before{
+    content: "";
+    border-top: 16px solid white;
+    border-right: 16px solid transparent;
+    position: absolute;
+    top: 5px;
+    right: -10px;
+}
+
+div.left-text2_box{
+    margin-top: 86px;
+}
