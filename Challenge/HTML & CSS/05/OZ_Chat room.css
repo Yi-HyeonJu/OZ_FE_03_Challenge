@@ -1,3 +1,4 @@
+/* 전체적인 틀 */
 *{
     font-family: "Gowun Dodum", sans-serif;
     font-weight: 400;
@@ -12,42 +13,47 @@ body{
     margin: 0;
 }
 
-.full_screen{
+/* 전체화면(채팅방 배경화면) */
+.full-screen{
     height: 100%;
     background-color: #c8edff;
 }
 
-.chat-screen{
+/* 채팅방 정보 */
+.chat-info_screen{
     height: calc(100% - 90px);
 }
-.chat-screen-bar{
+.chat-info_screen-bar{
     background-color: white;
     padding: 16px;
     height: 80px;
 }
-.room-picture{
+.room-info_picture{
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: 5px;
     border-radius: 10px;
     background-color: #c8edff;
 }
 .room-info{
     float: left;
 }
-.room-name, .room-count{
-    margin: 2px;
+.room-info_name, .room-info_count{
+    margin: 5.5px;
 }
-.room-count{
+.room-info_name{
     font-size: 12px;
+}
+.room-info_count{
+    font-size: 10px;
     color: gray;
 }
 
+/* 메세지 보내는 곳 */
 .chat-form{
     height: 90px;
-    background-color: #fff;
+    background-color: #ffffff;
 }
-
 .chat-form-text{
     float: left;
     width: calc(100% - 90px);
@@ -57,23 +63,23 @@ body{
     font-size: 12px;
     padding: 10px;
 }
-
 .chat-form-text:focus{
     outline: none;
 }
 
+
+/* 전송 버튼 */
 .chat-form-button{
-    margin: 20px 10px;
+    margin: 25px 10px;
     float: right;
-    width: 70px;
-    height: 50px;
-    border-width: 1px;
-    border-color: black;
+    width: 60px;
+    height: 40px;
+    border-width: 0px;
+    border-color: rgb(103, 186, 245);
     border-radius: 15px;
     background-color: #7dd2fd;
     font-size: 12px;
 }
-
 .chat-form-button:active{
     background-color: #4cabdb;
 }
