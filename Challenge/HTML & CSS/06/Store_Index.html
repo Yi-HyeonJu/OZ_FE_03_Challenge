@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 동네 가게</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 16px;
+        }
+        body{
+            margin: 0;
+        }
+        .flex{
+            display: flex;
+        }
+    </style>
+    <link href="Store_Header.css" rel="stylesheet">
+    <link href="Store_Info.css" rel="stylesheet">
+    <link href="Store_Main.css" rel="stylesheet">
+    <link href="Store_Banner.css" rel="stylesheet">
+    <link href="Store_Footer.css" rel="stylesheet">
+</head>
+<body>
+    <div class="full-container">
+        <header class="header">
+            <div class="header-content flex">
+                <div class="header-content_logo">동네 가게</div>
+                <nav class="header-content_nav flex">
+                    <ul>
+                        <li>중고거래</li>
+                        <li class="active">동네업체</li>
+                        <li>알바</li>
+                        <li>부동산 직거래</li>
+                        <li>중고차 직거래</li>
+                    </ul>
+                </nav>
+                <div class="header-content_input flex">
+                    <span class="icon glass">
+                        <input type="button" value="&#128269">
+                    </span>
+                    <span>
+                        <input class="search" type="text" placeholder="물품이나 동네를 검색해보세요">
+                    </span>
+                    <span class="icon menu">
+                        <input type="button" value="&#9776;">
+                    </span>
+                    <span>
+                        <input class="chat" type="button" value="채팅하기">
+                    </span>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
