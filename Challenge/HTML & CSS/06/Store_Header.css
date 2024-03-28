@@ -18,7 +18,7 @@ header.header {
 }
 
 .header-content_logo{
-    color: rgba(255, 136, 0, 0.845);
+    color: rgb(128, 128, 0);
     font-size: 1.5rem;
     font-weight: 700;
     
@@ -49,7 +49,7 @@ header.header {
     }
     
     .header-content_nav ul li.active{
-    color: rgba(255, 136, 0, 0.845);
+    color: rgb(128, 128, 0);
     }
     
     .header-content_input{
