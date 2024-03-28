@@ -5,8 +5,9 @@
 
 /* 채팅화면 */
 .chat-text_screenbox{
-    height: calc(100% - 70px);
+    height: calc(100% - 80px);
     overflow: scroll;
+    overflow-x: hidden;
 }
 .chat-text_screen{
     margin: 0 0 0 0;
