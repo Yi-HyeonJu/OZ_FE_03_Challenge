@@ -19,6 +19,9 @@
         .flex{
             display: flex;
         }
+        .main{
+            padding: 56px 0 5rem;
+        }
     </style>
     <link href="Store_Header.css" rel="stylesheet">
     <link href="Store_Info.css" rel="stylesheet">
@@ -28,6 +31,8 @@
 </head>
 <body>
     <div class="full-container">
+        
+        <!--맨 위에 고정 상단바-->
         <header class="header">
             <div class="header-content flex">
                 <div class="header-content_logo">우리 동네</div>
@@ -56,6 +61,37 @@
                 </div>
             </div>
         </header>
+        
+        <!--썸네일 정보-->
+        <main class="infomation">
+            <section class="info">
+                <div class="info_text">
+                    <h1>동네 이웃들이<br>자주 가는 동네 업체</h1>
+                    <p>우리 동네 사람들이<br>이용하는 업체를 찾아보세요.</p>
+                </div>
+            </section>
+            
+            <!--중간 카테고리-->
+            <section class="middle-info">
+                <h2 class="middle-info_name">다양한 동네 업체를 볼 수 있어요</h2>
+                <nav class="middle-info_nav flex">
+                    <ul>
+                        <li>전체</li>
+                        <li>식당</li>
+                        <li>카페</li>
+                        <li>용달/이사</li>
+                        <li>뷰티/미용</li>
+                        <li>헬스/필라테스/요가</li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <!--메인 가게 홍보글 -->
+            <section class="main">
+                
+            </section>
+            
+        </main>
     </div>
 </body>
 </html>
