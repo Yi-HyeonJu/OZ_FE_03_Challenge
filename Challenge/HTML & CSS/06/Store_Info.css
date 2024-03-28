@@ -1,0 +1,37 @@
+.info{
+    width: 100%;
+    height: 15rem;
+    background-color: rgba(128, 128, 0, 0.614);
+}
+
+.info_text{
+    max-width: 30rem;
+    margin: auto;
+    padding: 2.5rem 2rem 0;
+}
+.info_text h1{
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+.info_text p{
+    margin: 0.5rem 0 0;
+    font-size: 14px;
+    line-height: 1.2rem;
+}
+
+@media screen and (max-width: 720px) {
+    .info{
+        height: 13rem;
+    }
+    .info_text{
+        padding: 1rem 1rem 0;
+    }
+    .info_text h1{
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    .info_text p {
+        display: none;
+    }
+}
