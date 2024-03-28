@@ -31,7 +31,7 @@ header.header {
     
     .header-content_nav{
     align-items: center;
-    padding: 0 2.5rem 0 0;
+    padding: 0;
     flex-grow: 1;
     }
     
@@ -75,7 +75,7 @@ header.header {
         background-color: white;
         border: 0.5px solid rgba(102, 102, 102, 0.509);
         border-radius: 0.25rem;
-        font-weight: 500;
+        font-weight: 700;
     }
 
 .header-content_input .icon input{
@@ -90,7 +90,7 @@ header.header {
     display: none;
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1045px){
     .header-content_input .search{
         display: none;
     }
@@ -98,7 +98,7 @@ header.header {
         display: block;
     }
 }
-@media screen and (max-width: 680px){
+@media screen and (max-width: 720px){
     .header-content_input .chat, .header-content_nav{
         display: none;
     }
