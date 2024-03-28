@@ -90,7 +90,7 @@ header.header {
     display: none;
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 850px){
     .header-content_input .search{
         display: none;
     }
