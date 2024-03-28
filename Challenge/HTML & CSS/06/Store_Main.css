@@ -1,3 +1,4 @@
+/* 중간 목차 부분 */
 .middle-info{
     width: 100%;
     height: 9rem;
@@ -10,18 +11,15 @@
     font-size: 1.3rem;
     text-align: center;
 }
-
 .middle-info_nav{
     justify-content: center;
     align-items: center;
 }
-
 .middle-info_nav ul{
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
-
 .middle-info_nav ul li{
     display: inline-block;
     font-size: 13px;
@@ -30,4 +28,41 @@
     border: 0.5px solid rgba(102, 102, 102, 0.509);
     border-radius: 15px;
     background-color: rgba(129, 129, 129, 0.067);
+}
+
+/* 메인 상점 정보 부분 */
+.main{
+    max-width: 50rem;
+    margin: auto;
+    padding: 10px;
+}
+
+.main-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.main_item{
+    padding: 1.25rem 0;
+    flex-basis: 50%;
+}
+.main_picture{
+    min-width: 3rem;
+    min-height: 3rem;
+    background-color: rgb(125,125,0);
+}
+.main-content{
+    margin-left: 0.7rem;
+}
+
+.main-content_title{
+    font-weight: 700;
+}
+.main-content_store{
+    line-height: 1.3rem;
+    font-size: 1.1rem;
+}
+.main-content_review{
+    line-height: 1.3rem;
+    font-size: 0.8rem;
+    color: #aeaeae;
 }
