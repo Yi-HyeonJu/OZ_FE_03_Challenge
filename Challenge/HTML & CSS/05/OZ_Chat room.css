@@ -4,34 +4,34 @@
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 html{
-    height: 100%;
+    height: 100vh;
 }
 body{
-    height: 100%;
-    margin: 0;
+    height: 100vh;
 }
 
 /* 전체화면(채팅방 배경화면) */
 .full-screen{
-    height: 100%;
+    height: 100vh;
     background-color: #c8edff;
 }
 
 /* 채팅방 정보 */
 .chat-info_screen{
-    height: calc(100% - 90px);
+    height: calc(100% - 120px);
 }
 .chat-info_screen-bar{
     background-color: white;
-    padding: 16px;
-    height: 80px;
+    padding: 15px;
+    height: 100px;
 }
 .room-info_picture{
-    width: 50px;
-    height: 50px;
-    margin-right: 5px;
+    width: 70px;
+    height: 70px;
     border-radius: 10px;
     background-color: #c8edff;
 }
@@ -39,29 +39,29 @@ body{
     float: left;
 }
 .room-info_name, .room-info_count{
-    margin: 5.5px;
+    margin: 3px 0 8px 17px;
 }
 .room-info_name{
-    font-size: 12px;
+    font-size: 17px;
 }
 .room-info_count{
-    font-size: 10px;
+    font-size: 15px;
     color: gray;
 }
 
 /* 메세지 보내는 곳 */
 .chat-form{
-    height: 90px;
+    height: 120px;
     background-color: #ffffff;
 }
 .chat-form-text{
     float: left;
-    width: calc(100% - 90px);
+    width: calc(100% - 120px);
     height: 90px;
     resize: none;
     border: none;
-    font-size: 12px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 20px;
 }
 .chat-form-text:focus{
     outline: none;
@@ -70,15 +70,15 @@ body{
 
 /* 전송 버튼 */
 .chat-form-button{
-    margin: 25px 10px;
+    margin: 35px 15px;
     float: right;
-    width: 60px;
-    height: 40px;
+    width: 80px;
+    height: 60px;
     border-width: 0px;
     border-color: rgb(103, 186, 245);
     border-radius: 15px;
     background-color: #7dd2fd;
-    font-size: 12px;
+    font-size: 20px;
 }
 .chat-form-button:active{
     background-color: #4cabdb;
