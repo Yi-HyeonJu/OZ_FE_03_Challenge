@@ -1,7 +1,7 @@
 /* 메인 목차부터 상점 정보 전체 부분 */
 .main_box{
     max-width: 50rem;
-    height: 61rem;
+    height: 100%;
     margin: auto;
     padding: 0 10px;
     justify-content: center;
@@ -10,7 +10,7 @@
 /* 중간 목차 부분 */
 .main-info{
     width: 100%;
-    height: 9rem;
+    height: 100%;
 }
 .main-info_name{
     margin: 0;
@@ -39,6 +39,19 @@
     border-radius: 15px;
     background-color: rgba(129, 129, 129, 0.067);
 }
+
+@media screen and (max-width: 720px){
+    .main-info_name{
+        font-size: 1.5rem;
+        padding: 3rem 0 1.5rem;
+    }
+    .main-info_list li{
+        font-size: 10px;
+        margin: 0 2px;
+        padding: 4px 9px;
+    }
+}
+
 /*양 옆 상점들을 크게 두르고 있는 박스*/
 .store-container{
     margin-top: 2rem;
@@ -98,13 +111,10 @@
 }
 
 @media screen and (max-width: 720px){
-    .main-info_name{
-        font-size: 1.5rem;
-        padding: 3rem 0 1.5rem;
+    .store_list{
+        display: block;
     }
-    .main-info_list li{
-        font-size: 10px;
-        margin: 0 2px;
-        padding: 4px 9px;
+    .store_box{
+        width: 100%;
     }
 }
