@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up 클론코딩</title>
+    
+    <link href="./Sign up.css" rel="stylesheet">
+</head>
+<body>
+    <div class="full-box">
+        <div class="title">OZ 초격차 캠프 회원가입</div>
+        <form action="non.com" method="get">
+            <ul>
+                <li>
+                    <input class="width" type="text" name="id" placeholder="아이디">
+                </li>
+                <li>
+                    <input class="width" type="password" name="pass" placeholder="비밀번호">
+                </li>
+                <li>
+                    <input class="width" type="email" name="e-mail" placeholder="[선택]이메일주소(비밀번호 찾기 들 본인 확인용)">
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input class="width" type="text" name="name" placeholder="이름">
+                </li>
+                <li>
+                    <input class="width" type="text" name="birth" placeholder="생년월일 8자리">
+                </li>
+                <li>
+                    <input class="width" type="text" name="phone-number" placeholder="휴대폰 번호 8자리 (010생략)">
+                </li>
+                <li class="radio_item">
+                    <div class="inline">
+                        <input class="gender-radio" type="radio" id="male" name="gender" value="male">
+                        <label class="gender-label" for="male">남성</label>
+                    </div>
+                    <div class="inline">
+                        <input class="gender-radio" type="radio" id="female" name="gender" value="female">
+                        <label class="gender-label" for="female">여성</label>
+                    </div>
+                </li>
+            </ul>
+            <div class="button_box">
+                <button type="submit">가입하기</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
