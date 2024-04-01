@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(
+        45deg,
+        #d3f4f4,
+        #f7a6d9,
+        #b7a5c8
+    )
+}
+div{
+    padding: 1rem;
+    border: 3px solid rgba(153, 206, 255, 0.513);
+    border-radius: 15px;
+    background-color: azure;
+}
