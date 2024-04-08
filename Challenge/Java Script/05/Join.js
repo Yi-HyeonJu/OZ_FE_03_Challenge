@@ -25,6 +25,7 @@ form.addEventListener("submit", function(event){
     
     document.body.innerHTML = ""
     
+    //컨테이너 생성
     const div = document.createElement("div")
     div.style.width = "450px"
     div.style.height = "300px"
@@ -32,28 +33,36 @@ form.addEventListener("submit", function(event){
     div.style.padding = "25px"
     div.style.borderRadius = "15px"
     div.style.backgroundColor = "rgba(240, 228, 159, 0.479)"
+    
+    //body 자식으로
     document.body.appendChild(div)
     
+    //환영메세지
     const h1 = document.createElement("h1")
     h1.style.fontSize = "30px"
     h1.style.paddingBottom = "20px"
     h1.textContent = `${userId}님 환영합니다.`
     
+    //회원가입 정보 메세지
     const p1 = document.createElement("p")
     p1.textContent = `회원가입 시 입력하신 내역은 다음과 같습니다.`
     
+    //아이디 정보
     const p2 = document.createElement("p")
     p2.textContent = `아이디 : ${userId}`
-    
+        
+    //이름 정보
     const p3 = document.createElement("p")
     p3.textContent = `이름 : ${userName} `
-    
+        
+    //전화번호 정보
     const p4 = document.createElement("p")
-    p4.textContent = `전화번호 : ${userPhone}`
-    
+    p4.textContent = `휴대폰 번호 : ${userPhone}`
+        
+    //직무 정보
     const p5 = document.createElement("p")
     p5.textContent = `원하는 직무 : ${userPosition}`
     
-    
+    //div 자식으로
     div.append(h1, p1, p2, p3, p4, p5)
 })
