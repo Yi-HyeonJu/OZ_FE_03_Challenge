@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>회원가입 폼</title>
+    <link rel="stylesheet" href="From.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=" />
+  </head>
+  <body>
+    <!-- 여기에 HTML문서를 작성하세요. -->
+    <div class="full-box">
+      <div class="title">회원 가입</div>
+      <div class="form-box">
+        <form>
+          <fieldset>
+            <legend>기본 정보</legend>
+            <div class="basic-box flex">
+              <div class="inBox_name flex">
+                <span>이름:</span>
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    class="long-text"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="inBox_ssn flex">
+                <span>주민번호:</span>
+                <div class="inputBox flex">
+                  <input
+                    type="text"
+                    class="short-text"
+                    id="ssn_front"
+                    name="ssn_front"
+                    required
+                  />
+                  <div class="mid-">-</div>
+                  <input
+                    type="password"
+                    class="short-text"
+                    id="ssn_back"
+                    name="ssn_back"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>가입 정보</legend>
+            <div class="basic-box flex">
+              <div class="inBox_id flex">
+                <span>아이디:</span>
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    class="long-text"
+                    id="id"
+                    name="id"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="inBox_pw flex">
+                <span>비밀번호:</span>
+                <div class="inputBox">
+                  <input
+                    type="password"
+                    class="long-text"
+                    id="pw"
+                    name="pw"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="inBox_pw2 flex">
+                <span>비밀번호 확인:</span>
+                <div class="inputBox">
+                  <input
+                    type="password"
+                    class="long-text"
+                    id="pw_re"
+                    name="pw_re"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="inBox_email flex">
+                <span>이메일:</span>
+                <div class="inputBox flex">
+                  <input
+                    type="text"
+                    class="short-text"
+                    id="emailId"
+                    name="emailId"
+                    required
+                  />
+                  <div class="mid-">@</div>
+                  <select class="short-text" id="mailbox" name="mailbox">
+                    <option>gmail.com</option>
+                    <option>naver.com</option>
+                    <option>daum.net</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>기타 정보</legend>
+            <div class="basic-box flex">
+              <div class="inBox_address flex">
+                <span>주소:</span>
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    class="long-text"
+                    id="address"
+                    name="address"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="inBox_gender flex">
+                <span>성별:</span>
+                <div class="inputBox">
+                  <input type="radio" id="male" value="male" name="gender" />
+                  <label for="male">남성</label>
+                  <input
+                    type="radio"
+                    id="female"
+                    value="female"
+                    name="gender"
+                  />
+                  <label for="female">여성</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              id="agree"
+              name="agree"
+              required
+            />
+            <label for="agree">개인정보 동의</label>
+          </div>
+          <div class="submit-btn">
+            <button type="submit">회원가입</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="From.js"></script>
+  </body>
+</html>
