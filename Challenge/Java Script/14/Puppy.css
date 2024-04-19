@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+#container{
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
+}
+/*헤더의 총 부분(픽스되어있는 부분)*/
+header{
+    width: 100%;
+    max-width: 640px;
+    height: 80px;
+    border-bottom: 1px solid gray;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+/*견종 검색창, 필터링 버튼*/
+.header_Search{
+    display: flex;
+    align-items: center;
+}
+/*헤더의 겁색창, 필터링 버튼, 셀렉트 부분*/
+input, button, select{
+    height: 30px;
+    border: 0.5px solid gray;
+}
+input{
+    padding: 0 10px;
+    width: 200px;
+}
+input:focus{
+    outline: none;
+}
+button{
+    width: 50px;
+    cursor: pointer;
+}
+button:active{
+    background-color: rgb(158, 158, 158);
+}
+
+/*강아지들 랜덤 사진*/
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+
+
+/*사진 추가와, 웹페이지 이동*/
+.more, .top{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: fixed;
+    cursor: pointer;
+}
+.more{
+    color:white;
+    background-color: rgb(62, 135, 198);
+    left: 40px;
+    bottom: 30px;
+}
+.top{
+    color:white;
+    background-color: rgb(62, 135, 198);
+    right: 40px;
+    bottom: 30px;
+}
