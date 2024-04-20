@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#stop {
+    border: none;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgba(231, 29, 29, 0.918);
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#now_time {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#sharp {
+    font-size: 20px;
+    font-weight: 500;
+}
