@@ -6,7 +6,7 @@ const qs = require('querystring');
 const express = require('express');
 const app = express();
 
-// 파싱
+// express 파싱
 app.use(express.urlencoded({ extended: false }));
 
 // express로 public 폴더의 정적인 파일(html) 사용
