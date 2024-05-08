@@ -17,7 +17,7 @@ class ExpenseForm extends Component {
 									/>
             </div>
 						<div className='form-group'>
-							<label for='amount'>비용</label>
+							<label htmlFor='amount'>비용</label>
 							<input
 								type='number'
 								className='form-control'
@@ -27,7 +27,7 @@ class ExpenseForm extends Component {
 							/>
         </div>
         </div>
-				<button type='submit' classname='btn'>제출</button>
+				<button type='submit' className='btn'>제출</button>
       </form>
     );
   }
