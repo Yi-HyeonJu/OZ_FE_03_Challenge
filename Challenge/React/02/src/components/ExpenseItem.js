@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './ExpenseItem.css'
+import { MdEdit, MdClear } from 'react-icons/md'
 
 class ExpenseItem extends Component {
   render() {
@@ -9,9 +10,13 @@ class ExpenseItem extends Component {
           <span className='expense'>빵</span>
           <span className='amount'>100원</span>
         </div>
-        <div>
-          <button className='edit-btn'>수정</button>
-          <button className='clear-btn'>삭제</button>
+        <div className='btn'>
+          <button className='edit-btn'>
+            <MdEdit/>
+          </button>
+          <button className='clear-btn'>
+            <MdClear/>
+          </button>
         </div>
       </li>
     );
