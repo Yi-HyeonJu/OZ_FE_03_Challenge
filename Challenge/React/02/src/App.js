@@ -37,6 +37,7 @@ const App = () => {
       setCharge("")
       setAmount(0)
     }else {
+      alert('상품과 비용을 모두 입력해주세요.')
       console.error('error')
     }
   }
