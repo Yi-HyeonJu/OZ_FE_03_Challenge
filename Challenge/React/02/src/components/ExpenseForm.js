@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ExpenseForm.css';
 
-class ExpenseForm extends Component {
-  render() {
+const ExpenseForm = () => {
     return (
       <form>
         <div className='form-center'>
@@ -29,8 +28,7 @@ class ExpenseForm extends Component {
         </div>
 				<button type='submit' className='btn'>제출</button>
       </form>
-    );
-  }
+    )
 }
 
 export default ExpenseForm;

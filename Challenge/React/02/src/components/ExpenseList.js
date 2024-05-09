@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './ExpenseList.css'
 import ExpenseItem from './ExpenseItem';
 
-class ExpenseList extends Component {
-  render() {
+const ExpenseList = (props) => {
     return (
       <>
         <ul className='list'>
-          {this.props.initialExpenses.map(expense => {
+          {props.expense.map(expense => {
 					return (
-            <ExpenseItem key={expense.id} expense={expense}/>
+            <ExpenseItem key={expense.id} expense={expense}
+            handleDelete={props.handleDelete}/>
           )
 				})}
         </ul>
@@ -18,7 +18,6 @@ class ExpenseList extends Component {
         </button>
 			</>
     );
-  }
 }
 
 export default ExpenseList;
