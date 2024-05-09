@@ -1,4 +1,4 @@
-import { Component, useState } from "react";
+import { useState } from "react";
 import './App.css';
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
@@ -11,11 +11,36 @@ const App = () => {
     { id: 3, charge: '컵라면', amount: 1700}
   ])
 
+  const [charge, setCharge] = useState("");
+  const [amount, setAmount] = useState(0);
+
+  const handleCharge = (e) => {
+    setCharge(e.target.value);
+  }
+  const handleAmount = (e) => {
+    setAmount(e.target.valueAsNumber)
+  }
+
   const handleDelete = (id) => {
     const newExpense = expenses.filter(expense => expense.id !== id)
     
     setExpense(newExpense)
   }
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if( charge !== "" && amount > 0 ){
+      const newExpense = {id: crypto.randomUUID(), charge, amount}
+      const newExpenses = [...expenses, newExpense]
+      
+      setExpense(newExpenses)
+      setCharge("")
+      setAmount(0)
+    }else {
+      console.error('error')
+    }
+  }
+
     return(
       <main className='main-container'>
         <div className='sub-container'>
@@ -23,7 +48,10 @@ const App = () => {
 
           <div style={{ width: '100%', backgroundColor: 'white', padding: '1rem' }}>
             {/* Expense Form */}
-            <ExpenseForm />
+            <ExpenseForm charge={charge} handleCharge={handleCharge}
+            amount={amount} handleAmount={handleAmount}
+            handleSubmit={handleSubmit}
+            />
           </div>
 
           <div style={{ width: '100%', backgroundColor: 'white', padding: '1rem' }}>
