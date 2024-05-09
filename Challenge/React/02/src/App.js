@@ -2,6 +2,7 @@ import { useState } from "react";
 import './App.css';
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
+import Alert from "./components/Alert";
 
 const App = () => {
 
@@ -14,6 +15,8 @@ const App = () => {
   const [charge, setCharge] = useState("");
   const [amount, setAmount] = useState(0);
 
+  const [alert, setAlert] = useState({ show: false })
+
   const handleCharge = (e) => {
     setCharge(e.target.value);
   }
@@ -25,6 +28,8 @@ const App = () => {
     const newExpense = expenses.filter(expense => expense.id !== id)
     
     setExpense(newExpense)
+    
+    handleAlert({ type: "danger", text: "삭제가 되었습니다."})
   }
   
   const handleSubmit = (e) => {
@@ -36,15 +41,24 @@ const App = () => {
       setExpense(newExpenses)
       setCharge("")
       setAmount(0)
+      
+      handleAlert({ type: "success", text: "추가가 되었습니다."})
     }else {
-      alert('상품과 비용을 모두 입력해주세요.')
-      console.error('error')
+      handleAlert({ type: "danger", text: "상품의 이름과 비용을 적어주세요."})
     }
+  }
+
+  const handleAlert = ({ type, text }) => {
+    setAlert({ show: true, type, text })
+    setTimeout(() => {
+      setAlert({ show: false })
+    }, 5000)
   }
 
     return(
       <main className='main-container'>
         <div className='sub-container'>
+          {alert.show ? <Alert type={alert.type} text={alert.text}/> : null }
           <h1>장바구니</h1>
 
           <div style={{ width: '100%', backgroundColor: 'white', padding: '1rem' }}>
