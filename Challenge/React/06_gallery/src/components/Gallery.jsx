@@ -7,6 +7,7 @@ function Gallery() {
     const [photos, setPhotos] = useState([]);
 
     const fetchPhotos = async (query) => {
+        //.env.local 파일에 API 키를 넣어야하는데 이메일 오류로 불가능ㅠㅠㅠ
         const accessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
         const url = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${accessKey}`;
         
