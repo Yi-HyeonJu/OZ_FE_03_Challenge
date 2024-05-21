@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './MovieModal.css';
 
 const MovieModal = ({
