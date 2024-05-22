@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"
 import axios from '../../api/axios';
+import './SearchPage.css'
 
 const SearchPage = () => {
 
@@ -45,11 +46,11 @@ const SearchPage = () => {
                                 onClick={() => navigate(`/${movie.id}`)}
                                 className="movie_column-poster"
                             >
-                            <img
-                                        src={movieImageUrl}
-                                        alt="영화 이미지"
-                                className="movie_poster"
-                            />
+                                <img
+                                    src={movieImageUrl}
+                                    alt="영화 이미지"
+                                    className="movie_poster"
+                                />
                             </div>
                         </div>
                     )
@@ -61,10 +62,10 @@ const SearchPage = () => {
         return (
             <section className="no-results">
                 <div className="no-results_text">
-                <p>
+                    <p>
                         {searchTerm} 검색어에 해당하는 영화가 없습니다. 
-                </p>
-            </div>
+                    </p>
+                </div>
             </section>
         )
     }
