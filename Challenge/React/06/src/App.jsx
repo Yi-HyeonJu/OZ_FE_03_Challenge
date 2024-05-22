@@ -23,7 +23,8 @@ function App() {
       <Route path='/' element={<Layout />} >
         <Route index element={<LoginPage />} />
         <Route path='main' element={<MainPage />} />
-        <Route path='movieId' element={<DetailPage />} />
+        {/* 동적으로 변하는 것을 나타내는 기호 : 추가 */}
+        <Route path=':movieId' element={<DetailPage />} />
         <Route path='search' element={<SearchPage />} />
       </Route>
     </Routes>
