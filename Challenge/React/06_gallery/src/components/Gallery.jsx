@@ -70,7 +70,6 @@ img {
 
 const GalleryWarp = styled.div`
 input{
-    height: 27px;
-    margin: 0 5px;
+    height: 35px;
 }    
 `
