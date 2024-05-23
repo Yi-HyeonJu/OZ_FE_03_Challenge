@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
+import { useRef } from 'react';
 import './MovieModal.css';
+import useOnClickOutside from '../../hooks/useOnClickOutside'
 
 const MovieModal = ({
     /*{...movieSelected} 객체에서 이미 분해 된 개별 속성 props로 받기*/
@@ -13,10 +15,16 @@ const MovieModal = ({
     
     setModalOpen,
 }) => {
+
+    const ref = useRef(null)
+    useOnClickOutside(ref, () => {
+        setModalOpen(false)
+    })
+
     return (
         <div className="presentation" role="presentation">
             <div className="wrapper-modal">
-                <div className="modal">
+                <div className="modal" ref={ref}>
                     <span
                         onClick={() => setModalOpen(false)}
                         className="modal-close"
