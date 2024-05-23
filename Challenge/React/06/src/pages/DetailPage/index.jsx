@@ -16,6 +16,7 @@ const DetailPage = () => {
                 setMovie(response.data)
             } catch (err) {
                 console.log(err)
+                alert("영화 정보가 없습니다.")
             }
         }
         fetchData()
