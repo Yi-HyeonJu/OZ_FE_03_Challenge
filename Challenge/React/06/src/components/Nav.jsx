@@ -1,6 +1,8 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { styled } from 'styled-components'
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from 'firebase/auth'
+import app from '../firebase';
 
 
 const Nav = () => {
@@ -11,8 +13,33 @@ const Nav = () => {
         setSearchValue(e.target.value)
         navigate(`/search?q=${e.target.value}`)
     }
-
+    
+    const { pathname } = useLocation()
     const navigate = useNavigate()
+
+    const auth = getAuth(app)
+    const provider = new GoogleAuthProvider()
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if(!user){
+                navigate('/')
+            }else if(user && pathname === "/"){
+                navigate('/main')
+            }
+        })
+
+    }, [auth, navigate, pathname])
+
+    const handleAuth = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                alert(error.message);
+            })
+    }
 
     return (
         <NavWrapper>
@@ -22,14 +49,21 @@ const Nav = () => {
                     src="/images/apple-logo.png"
                     onClick={() => { window.location.href = "/" }}/>
             </Logo>
-        <Input
-        className='nav_inut'
-        type="text"
-        value={searchValue}
-        onChange={handleChange}
-        placeholder='영화를 검색해주세요'
-        />
-        <Login>로그인</Login>
+
+            { pathname === "/" ? (
+                <Login
+                onClick={handleAuth}
+                >로그인</Login>
+            ) : (
+                <Input
+                className='nav_inut'
+                type="text"
+                value={searchValue}
+                onChange={handleChange}
+                placeholder='영화를 검색해주세요'
+                />
+            )
+        }
         </NavWrapper>
     );
 };
