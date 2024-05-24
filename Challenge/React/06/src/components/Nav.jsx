@@ -8,7 +8,10 @@ import app from '../firebase';
 const Nav = () => {
     
     const [searchValue, setSearchValue] = useState('')
-    const [userData, setUserData] = useState({})
+    
+    const initialUserData = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : {}
+
+    const [userData, setUserData] = useState(initialUserData)
 
     const handleChange = (e) => {
         setSearchValue(e.target.value)
@@ -37,6 +40,7 @@ const Nav = () => {
             .then((result) => {
                 console.log(result);
                 setUserData(result.user)
+                localStorage.setItem('userData', JSON.stringify(result.user))
             })
             .catch((error) => {
                 alert(error.message);
@@ -46,6 +50,7 @@ const Nav = () => {
     const handleLogOut = () => {
         signOut(auth).then(() => {
             setUserData({})
+            localStorage.removeItem('userData')
         }).catch((error) => {
             alert(error.message)
         })
