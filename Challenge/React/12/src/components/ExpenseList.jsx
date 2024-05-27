@@ -4,7 +4,7 @@ import ExpenseItem from './ExpenseItem';
 
 const ExpenseList = () => {
     
-    const { expenses } = useContext(AppContext)
+    const { expenses = [] } = useContext(AppContext)
 
     return (
         <>
@@ -14,14 +14,14 @@ const ExpenseList = () => {
             placeholder='검색하기...'
             />
             <ul className='list-group mt-3 mb-3'>
-                {expenses.map((expense) => {
+                {expenses.map((expense) => (
                     <ExpenseItem
                     key={expense.id}
                         id={expense.id}
                         name={expense.name}
                         cost={expense.cost}
                     />
-                })}
+                ))}
             </ul>
         </>
     );
