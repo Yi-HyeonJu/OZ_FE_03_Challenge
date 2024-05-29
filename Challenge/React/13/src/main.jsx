@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createStore } from 'redux'
-import counter from '../reducers/index.jsx'
+import rootReducer from '../reducers/index.jsx'
 
-const store = createStore(counter)
+const store = createStore(rootReducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

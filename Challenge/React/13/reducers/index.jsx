@@ -1,15 +1,10 @@
-const counter = (state = 0, action) => {
-    switch (action.type) {
-        case 'INCREMENT':
-            
-            return state + 1
+import { combineReducers } from "redux";
+import todos from "./todos";
+import counter from "./counter";
 
-        case 'DECREMENT':
-            return state -1
-    
-        default:
-            return state
-    }
-}
+const rootReducer = combineReducers({
+    todos: todos,
+    counter: counter
+})
 
-export default counter
+export default rootReducer
