@@ -22,7 +22,7 @@ const ExpenseItem = ({ id, name, cost }) => {
         >
             {name}
             <div>
-                <span className='badge bd-secondary me-3'>
+                <span className='badge bg-secondary me-3'>
                     {cost}
                 </span>
                 <TiDelete
