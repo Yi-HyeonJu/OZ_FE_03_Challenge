@@ -4,7 +4,7 @@ import ExpenseItem from './ExpenseItem';
 
 const ExpenseList = () => {
     
-    const { expenses = [] } = useContext(AppContext)
+    const { expenses } = useContext(AppContext)
 
     return (
         <>

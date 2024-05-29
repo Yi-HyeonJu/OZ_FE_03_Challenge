@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { AppContextProvider } from './contexts/AppContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <AppContextProvider value={{}}>
+  <AppContextProvider>
     <App />
   </AppContextProvider>
 )
