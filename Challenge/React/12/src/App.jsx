@@ -16,7 +16,7 @@ function App() {
       <div className='col-sm'>
         <Remaining/>
       </div>
-      <div className='col-s,'>
+      <div className='col-sm'>
         <ExpenseTotal/>
       </div>
 
