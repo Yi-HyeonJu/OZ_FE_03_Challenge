@@ -10,14 +10,15 @@ function App() {
     <div className='container'>
       <h1 className='mt-3'>지출 계획</h1>
       <div className='row mt-3'>
-        <div className='col-sm'></div>
+        <div className='col-sm'>
           <Budget/>
-      </div>
-      <div className='col-sm'>
-        <Remaining/>
-      </div>
-      <div className='col-sm'>
-        <ExpenseTotal/>
+        </div>
+        <div className='col-sm'>
+          <Remaining/>
+        </div>
+        <div className='col-sm'>
+          <ExpenseTotal/>
+        </div>
       </div>
 
       <h3 className='mt-3'>지출들</h3>
