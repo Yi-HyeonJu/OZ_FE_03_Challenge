@@ -3,23 +3,20 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createStore } from 'redux'
-import rootReducer from '../reducers/index.jsx'
+import rootReducer from './reducers/index.jsx'
+import { Provider } from 'react-redux';
 
 const store = createStore(rootReducer)
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
-const render = () => {
-  root.render(
-    <React.StrictMode>
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
       <App
-        value={store.getState()}
-        onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
-        onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+        // onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+        // onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
       />
-    </React.StrictMode>
-  );
-};
-
-render();
-store.subscribe(render);
+    </Provider>
+  </React.StrictMode>
+);
