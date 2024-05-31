@@ -5,28 +5,33 @@ import { addTodo, deleteTodo, editTodo, toggleTodo } from './store/todoSlice'
 
 function App() {
 
-  const todos = useSelector(state => state.todos)
-
   const [text, setText] = useState('')
   const [editText, setEditText] = useState('')
   const [editId, setEditId] = useState(null)
+  const [filter, setFilter] = useState("all");
+
+  const todos = useSelector((state) => {
+    if (filter === "completed") {
+      return state.todos.filter((todo) => todo.completed);
+    } else if (filter === "active") {
+      return state.todos.filter((todo) => !todo.completed);
+    } else {
+      return state.todos;
+    }
+  });
 
   const dispatch = useDispatch()
 
   const todoSubmit = (e) => {
     e.preventDefault()
     if (text.trim() !== ''){
-      dispatch(
-        addTodo(text)
-      )
+      dispatch(addTodo(text))
       setText('')
     }
   }
 
   const todoDelete = (id) => {
-    dispatch(
-      deleteTodo(id)
-    )
+    dispatch(deleteTodo(id))
   }
 
   const todoEdit = (id, text) => {
@@ -52,14 +57,21 @@ function App() {
     }
   }
 
+  const tofoFilter = (value => {
+    setFilter(value)
+  })
+
   return (
     <div className='App'>
       <form onSubmit={todoSubmit}>
         <input value={text} onChange={e => setText(e.target.value)}/>
-        <button
-          type='submit'
-        >할 일 추가하기</button>
+        <button type='submit'>할 일 추가하기</button>
       </form>
+      <select value={filter} onChange={(e) => tofoFilter(e.target.value)}>
+        <option value="all">모든 목록</option>
+        <option value="completed">완료한 목록</option>
+        <option value="active">미완료 목록</option>
+      </select>
       <ul>
         {todos.map(
           todo => (
