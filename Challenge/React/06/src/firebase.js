@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// 보안때문에 API는 삭제하였습니다.
 const firebaseConfig = {
     apiKey: "AIzaSyA-EH1eczMeChiiDRHFN21iyUXjE5qCack",
     authDomain: "reactappletv.firebaseapp.com",
